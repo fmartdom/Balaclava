@@ -1,0 +1,634 @@
+* {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+@keyframes button {
+    to {
+        translate: 3px;
+    }
+}
+
+@media (max-width: 700px) {
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+
+
+
+#header{
+    border-bottom: white;
+    padding: 0%;
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    background-color: white;
+}
+
+#header .logoL {
+    padding: 0%;
+    margin: 0%;
+    width: 15%;
+    height: auto;
+}
+
+#header #logo {
+    padding: 0%;
+    margin: 0%;
+    width: 30%;
+    height: auto;
+}
+
+#navBar {
+    position: sticky;
+    display: flex;
+    background-color: rgba(255, 255, 255 , 0.7);
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    z-index: 100;
+}
+#navBar .title {
+    font-family: 'Zilla Slab', serif;
+    font-weight: 600;
+    margin: 10px;
+
+}
+#navBar .title1 {
+    font-family: 'Zilla Slab', serif;
+    font-weight: 600;
+    margin: 10px;
+    margin-right: auto;
+}
+#navBar .title1 a p, #navBar .title p{
+    display: none;
+}
+
+#navBar #simbol:hover {
+    border: solid black 1px;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+#products a {
+    text-decoration: none; 
+}
+
+#mainSec {
+  width: 100%;
+  height: auto;
+  margin: 0%;
+}
+#mainSec img {
+    width: 100%;
+    height: auto;
+    margin: 0%;
+}
+#mainSecL  {
+    display: none;
+}
+#mainSecM  {
+    display: none;
+}
+
+#container {
+  width: 100%;
+  height: auto;
+  display: grid;
+  margin-top: 3%;
+  padding: 20px;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-evenly;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+#container .item {
+    position: relative;
+    min-width: 100px;
+    height: auto;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+}
+
+#container .item img {
+
+    width: 100%;
+    height: auto;
+}
+#container .item #name {
+    position: relative;
+    margin: 5px;
+    padding: 5px;
+    background-color: white;
+    bottom: 5px;
+    font-family: 'Zilla Slab', serif;
+    font-weight: 600;
+    text-align: center;
+}
+
+#container .item #price {
+    position: relative;
+    margin: 5px;
+    padding: 5px;
+    background-color: white;
+    bottom: 15px;
+    font-family: 'Zilla Slab', serif;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+#footer {
+    position: relative;
+    border: 1px solid black;
+    border-left: white;
+    border-right: white;
+    background-color: white;
+    font-family: 'Zilla Slab', serif;
+    width: 100%;
+    height: auto;
+    justify-items: center ;
+    bottom: 0;
+}
+#footer h4, #footer p {
+    margin: 15px;
+}
+
+}
+
+@media (min-width: 701px) {
+    
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        
+    }
+
+    header {
+        display: flex;
+        grid-area: header;
+        width: 100%;
+        height: 150px;
+        justify-content: space-between;
+    }
+
+    #header .logoL {
+        width: 150px;
+        height: 150px;
+    }
+    
+    #header #logo {
+        width: 400px;
+        height: 150px;
+    }
+
+    #leftMenu {
+        position:absolute;
+        display: none;
+        left: 0px;
+        background-color: white;
+        background-image:url('../images/IconSimetric\ -\ trans.png');
+        background-size: 50px;
+        padding: 10%;
+        z-index: 2;
+        width: 25vw;
+        height: 100vw;
+        
+    }
+
+    #leftMenu section {
+        position: fixed;
+        margin: 10px;
+        left: 8%;
+        top: 100px;
+        font-family: 'Zilla Slab', serif;
+        font-weight: 600;
+        text-align: left;
+    }
+
+    #leftMenu section p{
+        font-size: 24px;
+        width: 100%;
+        margin: 40px;
+        background-color: white;
+        transition: background-color .2s;
+    }
+
+    #leftMenu section p:hover{
+        margin: 40px;
+        background-color: black;
+        color: white;
+    }
+    #rightMenu {
+        position:absolute;
+        display: none;
+        right: 0px;
+        background-color: white;
+        background-image:url('../images/IconSimetric\ -\ trans.png');
+        background-size: 50px;
+        padding: 10%;
+        z-index: 2;
+        width: 25vw;
+        height: 100vw;
+        
+    }
+
+    #rightMenu section {
+        position: fixed;
+        margin: 10px;
+        right: 8%;
+        top: 100px;
+        font-family: 'Zilla Slab', serif;
+        font-weight: 600;
+        text-align: left;
+    }
+
+    #rightMenu section .category{
+        font-size: 24px;
+        width: 100%;
+        margin: 40px;
+        background-color: white;
+        transition: background-color .2s;
+    }
+
+    #rightMenu section .category:hover{
+        margin: 40px;
+        background-color: black;
+        color: white;
+    }
+
+    #rightMenu span {
+        background-color: #ffffff;
+        font-size: 35px;
+        font-weight: 400;
+        z-index: 102;
+        padding: 2px;
+    }
+    #rightMenu .categoryTitle {
+        color:#000000;
+        background-color: #ffffff;
+        font-size: 35px;
+        margin-top: 40px;
+    }
+
+    #rightMenu .rButton {
+        font-size: 24px;
+        width: 100%;
+        margin: 40px;
+        background-color: white;
+        transition: background-color .2s;
+        margin: 10px;
+        font-family: 'Zilla Slab', serif;
+        font-weight: 600;
+    }
+
+    #rightMenu section .rButton:hover{
+        margin: 40px;
+        background-color: black;
+        color: white;
+        margin: 10px;
+        font-family: 'Zilla Slab', serif;
+        font-weight: 600;
+    }
+
+    #navBar {
+        display: flex;
+        width: 100%;
+        position: sticky;
+        top: 0px;
+        background-color: rgba(255, 255, 255 , 0.7);
+        justify-content:center;
+        height: auto;
+        align-items: center;
+        z-index: 100;
+    }
+
+    #navBar #simbol {
+        font-weight: 600;
+        font-size: 30px;
+        margin-right: 60px;
+        margin-left: 60px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #navBar .title1 {
+        margin-right: auto;
+        width: auto;
+        font-family: 'Zilla Slab', serif;
+        font-weight: 600;
+        font-size: 40px;
+        text-align: center;
+        text-decoration: none;
+        color: #000000;
+    }
+    #products {
+        font-family: 'Zilla Slab', serif;
+        font-weight: 600;
+        font-size: 20px;
+        margin-right: 50px;
+        text-decoration: none;
+    }
+    #products a {
+        text-decoration: none;
+    }
+
+    #mainSec {
+        width: 50%;
+        height: auto;
+    }
+    #mainSec img{
+        width: 100%;
+    }
+
+    #mainSecL {
+        width: 50%;
+    }
+
+    #mainSecL img {
+        width: 100%;
+     }    
+    #container {
+        width: 100%;
+        margin: 50px;
+        display: grid;
+        grid-template-rows: 1;
+        grid-template-columns: repeat(4, 1fr);
+    } 
+    #container .item {
+        position: relative;
+        min-width: 100px;
+        height: auto;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+    }
+    
+    #container .item img {
+    
+        width: 100%;
+        height: auto;
+    }
+    #container .item #name {
+        display: none;
+    }
+    
+    #container .item #price {
+        display: none;
+    }
+
+    #banner {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    #banner img{
+        width: 100%;
+    }
+
+    #footer {
+        width: 100%;
+        display: grid;
+        width: 100%;
+        background-color: rgb(247, 247, 247);
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 1;
+        height: auto;
+        padding: 20px;
+        justify-content: center;
+        align-content: center;
+        border-top: solid black 1px;
+        border-bottom: solid black 1px;
+    }
+    #footer h4, #footer p {
+        font-size: 10px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 50px;
+        font-family: 'Zilla Slab', serif;
+        font-weight: 600;
+    }
+    /* Product Details */
+    #product {
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    #imgP {
+    width: 50%;
+    margin-bottom: 20px;
+}
+    #description {
+    position: fixed;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    padding-top: 5%;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 15%;
+    margin-left: 50%;
+    flex-wrap: wrap;
+    justify-items: center;
+    gap: 30px;
+}
+    #description h4 {
+        width: 100%;
+        text-justify: center;
+        font-family: 'Zilla Slab', serif;
+    }
+
+    #description h3 {
+        width: 100%;
+        font-family: 'Zilla Slab', serif;
+    }
+    #description p {
+        width: 100%;
+        font-family: 'Zilla Slab', serif;
+    }
+
+    #description form {
+        font-family: 'Zilla Slab', serif;
+    }
+    #description form select option {
+        font-family: 'Zilla Slab', serif;
+        font-weight: 600;
+    }
+    #size {
+        width: 100%;
+    }
+    .bBuy {
+        width: 30%;
+        font-family: 'Zilla Slab', serif;
+        font-weight: 400;
+        background-color: black;
+        color: white;
+        padding: 4px;
+    }
+/* All Products */
+    #container2 {
+        width: 100%;
+        height: auto;
+        display: grid;
+        padding: 20px;
+        padding-top: 0px;
+        gap: 20px;
+        align-items: center;
+        justify-content: space-evenly;
+        justify-items: center;
+        grid-template-columns: repeat(5, 1fr);
+      }
+      
+      #container2 .item {
+          position: relative;
+          min-width: 100px;
+          height: auto;
+          align-items: center;
+          align-content: center;
+          justify-items: center;
+      }
+      
+      #container2 .item img {
+          width: 100%;
+          height: auto;
+      }
+      #container2 .item #name {
+          position: relative;
+          margin: 5px;
+          padding: 5px;
+          background-color: white;
+          bottom: 5px;
+          font-family: 'Zilla Slab', serif;
+          font-weight: 600;
+          text-align: center;
+          justify-content: center;
+      }
+      
+      #container2 .item #price {
+          position: relative;
+          margin: 5px;
+          padding: 5px;
+          background-color: white;
+          bottom: 15px;
+          font-family: 'Zilla Slab', serif;
+          font-weight: 600;
+          text-align: center;
+      }
+
+      /* Login Register*/
+      .login-form {
+        background: #fff;
+        width: 500px;
+        margin: 65px auto;
+        display: -webkit-box;
+        display: flex;
+        font-family: 'Zilla Slab', serif;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+        border-radius: 4px;
+      }
+      .login-form h1 {
+        font-family: 'Zilla Slab', serif;
+        padding: 35px 35px 0 35px;
+        font-weight: 300;
+      }
+      .login-form .content {
+        font-family: 'Zilla Slab', serif;
+        padding: 35px;
+        text-align: center;
+      }
+      .login-form .input-field {
+        padding: 12px 5px;
+        font-family: 'Zilla Slab', serif;
+      }
+      .login-form .input-field input {
+        font-size: 16px;
+        display: block;
+        font-family: 'Zilla Slab', serif;
+        width: 100%;
+        padding: 10px 1px;
+        border: 0;
+        border-bottom: 1px solid #747474;
+        outline: none;
+        -webkit-transition: all .2s;
+        transition: all .2s;
+      }
+      .login-form .input-field input::-webkit-input-placeholder {
+        text-transform: uppercase;
+      }
+      .login-form .input-field input::-moz-placeholder {
+        text-transform: uppercase;
+      }
+      .login-form .input-field input:-ms-input-placeholder {
+        text-transform: uppercase;
+      }
+      .login-form .input-field input::-ms-input-placeholder {
+        text-transform: uppercase;
+      }
+      .login-form .input-field input::placeholder {
+        text-transform: uppercase;
+      }
+      .login-form .input-field input:focus {
+        border-color: #222;
+      }
+      .login-form a.link {
+        text-decoration: none;
+        color: #747474;
+        letter-spacing: 0.2px;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-top: 20px;
+      }
+      .login-form .action {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+                flex-direction: row;
+      }
+      .login-form .action button {
+        width: 100%;
+        border: none;
+        padding: 18px;
+        font-family: 'Zilla Slab', serif;
+        cursor: pointer;
+        border: #000000 solid 2px;
+        text-transform: uppercase;
+        background: #ffffff;
+        color: rgb(0, 0, 0);
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 0;
+        letter-spacing: 0.2px;
+        outline: 0;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+      }
+      .login-form .action button:hover {
+        background: #000000;
+        color: #fff;
+      }
+      .login-form .action button:nth-child(2):hover {
+        background: #000000;
+        color: #fff;
+
+      }
+}

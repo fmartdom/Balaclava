@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <%- include('../views/partials/head'); %>
+    </head>
+    <body>
+        <%- include('../views/partials/header'); %>
+        <section id="product">
+            <img src="https://aynotdead.com/wp-content/uploads/2022/03/CAMISA-OXFORD-MARRON-REMERA-ACID-0464.jpg" alt="" id="imgP">
+            <div id="description">
+                <h4>Nombre de Producto</h4>
+                <h3>$14546</h3>
+                <p>Fabricado en Algodón del danubio 
+                    recolectado por niños gemelos albinos.
+                </p>
+                <form id="size" action="">
+                    <label for="">Talle:</label>
+                    <select name="talle" id="talle">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+
+                    </select>
+                </form>
+                <button class="bBuy" type="submit">Agregar al Carrito</button>
+                <button class="bBuy" type="submit">Compra rápida</button>
+            </div>
+
+        </section>
+        
+    <%- include('../views/partials/footer'); %>
+</body>
+</html>
