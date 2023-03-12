@@ -211,8 +211,11 @@ body {
 
     #leftMenu section {
         position: fixed;
+        display: flex;
+        width: 18vw;
+        flex-wrap: wrap;
         margin: 10px;
-        left: 8%;
+        left: 3%;
         top: 100px;
         font-family: 'Zilla Slab', serif;
         font-weight: 600;
@@ -223,15 +226,37 @@ body {
         font-size: 24px;
         width: 100%;
         margin: 40px;
+        margin-bottom: 20px;
         background-color: white;
         transition: background-color .2s;
     }
 
     #leftMenu section p:hover{
         margin: 40px;
+        margin-bottom: 20px;
         background-color: black;
         color: white;
     }
+
+    #categoryC {
+
+        margin: 40px;
+        margin-left: 70%;
+        background-color: white;
+        color: #000000;
+        font-size: xx-large;
+        font-weight: 600;
+    }
+
+    #categoryC:hover {
+        margin: 40px;
+        background-color: black;
+        color: white;
+        margin-left: 70%;
+        font-size: xx-large;
+        font-weight: 600;
+    }
+
     #rightMenu {
         position:absolute;
         display: none;
