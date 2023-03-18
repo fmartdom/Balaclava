@@ -4,10 +4,10 @@ const leftMenuClose = document.querySelector('#categoryC');
 
 
 menuB.addEventListener('click', function(){
-    leftMenu.style.display = 'block';
+    leftMenu.id = ('leftMenu') ? 'leftMenuB' : 'leftMenu'; 
 });
 
 leftMenuClose.addEventListener('click', function (){
-    leftMenu.style.display = 'none';
+    leftMenu.id = 'leftMenu';
 });
 
