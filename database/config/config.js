@@ -4,7 +4,7 @@ module.exports =
   "development": {
     "username": "root",
     "password": '',
-    "database": "balaclava_db",
+    "database": "bc_shop",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

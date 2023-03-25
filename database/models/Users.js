@@ -6,14 +6,15 @@ module.exports = (sequelize, DataTypes)=>{
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
-            allowNull:false
+            allowNull:false,
         },
         name:{
             type: DataTypes.STRING ,
             allowNull:false
         },
         adress:{
-            type:DataTypes.STRING, 
+            type:DataTypes.STRING,
+            allowNull:false, 
         },
         email:{
             type: DataTypes.STRING,
@@ -22,14 +23,21 @@ module.exports = (sequelize, DataTypes)=>{
         },
         password:{
             type: DataTypes.STRING,
+            allowNull: false
         },
-        image: DataTypes.STRING,
-        profile: DataTypes.INTEGER,
         createdAt: {
             type: DataTypes.JSON
         },
         updatedAt: {
             type: DataTypes.JSON
+        },
+        dni:{
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        phone:{
+            type: DataTypes.STRING,
+            allowNull: false
         }
     }
     let config= {
@@ -42,8 +50,8 @@ module.exports = (sequelize, DataTypes)=>{
     User.associate=function(models){
                                     //Utilizo el alias que difinimos en el primer objeto del modelo.
         User.belongsToMany(models.Product,{
-            as:"product",
-            through:"cartProduct",
+            as:"user_product",
+            through:"purchase",
             foreingKey:"userId",
             otherKey:"productId"
         })  
