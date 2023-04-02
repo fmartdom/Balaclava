@@ -1,8 +1,8 @@
 module.exports = (sequelize, DataTypes)=>{
     //Definimos cómo va a llamar sequelize a la tabla.
-    let alias = "User"
+    let alias = "Users"
     let cols = {
-        id:{
+        id_users:{
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
@@ -19,7 +19,6 @@ module.exports = (sequelize, DataTypes)=>{
         email:{
             type: DataTypes.STRING,
             allowNull:false,
-            unique:true
         },
         password:{
             type: DataTypes.STRING,
@@ -41,21 +40,11 @@ module.exports = (sequelize, DataTypes)=>{
         }
     }
     let config= {
-      tableName:"user" ,
+      tableName:"users" ,
        timestamp: false 
    }
  
-    let User= sequelize.define(alias, cols, config);
+    let Users= sequelize.define(alias, cols, config);
     
-    User.associate=function(models){
-                                    //Utilizo el alias que difinimos en el primer objeto del modelo.
-        User.belongsToMany(models.Product,{
-            as:"user_product",
-            through:"purchase",
-            foreingKey:"userId",
-            otherKey:"productId"
-        })  
-    }
-
-    return User;
+    return Users;
 }

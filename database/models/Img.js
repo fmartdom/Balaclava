@@ -2,7 +2,7 @@ module.exports = (sequelize, DataTypes)=>{
     //Definimos cómo va a llamar sequelize a la tabla.
     let alias = "Img"
     let cols = {
-        id:{
+        id_img:{
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes)=>{
     Img.associate=function(models){
                                     //Utilizo el alias que difinimos en el primer objeto del modelo.
         Img.associate=function(models){
-        Category.hasMany(models.Product, 
+        models.Img.hasMany(models.Product, 
             { foreignKey: 'id_img' })
                                     }
     }

@@ -2,7 +2,7 @@ module.exports = (sequelize, DataTypes)=>{
     //Definimos cómo va a llamar sequelize a la tabla.
     let alias = "Product"
     let cols = {
-        id:{
+        id_products:{
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
@@ -45,23 +45,18 @@ module.exports = (sequelize, DataTypes)=>{
        timestamp: false 
    }
  
-    let User= sequelize.define(alias, cols, config);
+    let Product= sequelize.define(alias, cols, config);
     
-    Product.associate=function(models){
+   /* Product.associate=function(models){
                                     //Utilizo el alias que difinimos en el primer objeto del modelo.
-        Product.belongsToMany(models.User,{
-            as:"product_user",
-            through:"purchase",
-            otherKey:"userId",
-            foreignKey:"productId",
-                                    }) 
+ 
                                     
-        Product.belongsTo(Category, 
+        Product.belongsTo(models.Category, 
             { foreignKey: 'id_category' 
         });
-        Product.belongsTo(Category, { foreignKey: 'id_img' });
-
+        Product.belongsTo(models.Img, { foreignKey: 'id_img' });
     }
-
+    */
+    
     return Product;
 }
